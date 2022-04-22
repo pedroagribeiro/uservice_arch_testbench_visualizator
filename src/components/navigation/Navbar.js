@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Stack, Button } from '@chakra-ui/react';
+import { Box, Stack, Button, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { ColorModeSwitcher } from 'components/utils/ColorModeSwitcher';
 
 const Navbar = () => {
@@ -13,16 +14,19 @@ const Navbar = () => {
       >
         <Stack direction="row" h="60%" spacing="6px">
           <Button w="200px" variant="outline">
-            Live overview
+            <Link to="/">
+              <Text>Live Overview</Text>
+            </Link>
           </Button>
           <Button w="200px" variant="outline">
-            Results
+            <Link to="/results">
+              <Text>Results</Text>
+            </Link>
           </Button>
           <Button w="200px" variant="outline">
-            Charts
-          </Button>
-          <Button w="200px" variant="outline">
-            New simulation
+            <Link to="/new_simulation">
+              <Text>New simulation</Text>
+            </Link>
           </Button>
         </Stack>
         <ColorModeSwitcher justifySelf="end" />
