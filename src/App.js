@@ -5,6 +5,8 @@ import Navbar from 'components/navigation/Navbar';
 import Simulation from 'components/simulation/Simulation';
 import Results from 'components/results/Results';
 import NewSimulation from 'components/new_simulation/NewSimulation';
+import SimulationResult from 'components/results/SimulationResult';
+import GlobalResults from 'components/results/GlobalResults';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/" element={<Simulation />} />
             <Route path="/results" element={<Results />} />
             <Route path="/new_simulation" element={<NewSimulation />} />
+            <Route path="/charts/:id" element={<SimulationResult />} />
+            <Route path="/global_results" element={<GlobalResults />} />
           </Routes>
         </Box>
       </Router>

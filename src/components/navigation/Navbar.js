@@ -5,7 +5,7 @@ import { ColorModeSwitcher } from 'components/utils/ColorModeSwitcher';
 
 const Navbar = () => {
   return (
-    <Box borderWidth="2px" borderRadius="lg" p={2}>
+    <Box borderWidth="2px" borderRadius="lg" p={2} mb={4}>
       <Stack
         w="100%"
         direction="row"
@@ -13,21 +13,21 @@ const Navbar = () => {
         alignItems="center"
       >
         <Stack direction="row" h="60%" spacing="6px">
-          <Button w="200px" variant="outline">
-            <Link to="/">
+          <Link to="/">
+            <Button w="200px" variant="outline">
               <Text>Live Overview</Text>
-            </Link>
-          </Button>
-          <Button w="200px" variant="outline">
-            <Link to="/results">
+            </Button>
+          </Link>
+          <Link to="/results">
+            <Button w="200px" variant="outline">
               <Text>Results</Text>
-            </Link>
-          </Button>
-          <Button w="200px" variant="outline">
-            <Link to="/new_simulation">
+            </Button>
+          </Link>
+          <Link to="/new_simulation">
+            <Button w="200px" variant="outline">
               <Text>New simulation</Text>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Stack>
         <ColorModeSwitcher justifySelf="end" />
       </Stack>
